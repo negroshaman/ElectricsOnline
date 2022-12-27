@@ -18,6 +18,7 @@ As mentioned, this is a experimental project and is not ready for production. Pl
 
 ## Features
 
+- Sales tax computation for each states using this chart https://www.taxpolicycenter.org/statistics/state-sales-tax-rates
 - Frontend pages - display Products, Orders, Suppliers for Customers and Visitor.
 - Authentication - a `Visitor` can become a `Customer`
 - Admin Page
