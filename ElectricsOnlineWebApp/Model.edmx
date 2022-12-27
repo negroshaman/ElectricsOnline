@@ -34,6 +34,7 @@
           <Property Name="TotalSale" Type="money" Nullable="false" />
           <Property Name="SalesTax" Type="money" />
           <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="GrandTotal" Type="money" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -214,6 +215,7 @@
           <NavigationProperty Name="Product" Relationship="Self.FK_Order_Products_Products" FromRole="Order_Products" ToRole="Products" />
           <Property Name="SalesTax" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="GrandTotal" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -391,6 +393,7 @@
           <EntitySetMapping Name="Order_Products">
             <EntityTypeMapping TypeName="ElectricsOnlineWebApp.Order_Products">
               <MappingFragment StoreEntitySet="Order_Products">
+                <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
                 <ScalarProperty Name="StateID" ColumnName="StateID" />
                 <ScalarProperty Name="SalesTax" ColumnName="SalesTax" />
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />

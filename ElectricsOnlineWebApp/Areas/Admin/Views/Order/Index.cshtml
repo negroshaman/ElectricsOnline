@@ -32,6 +32,9 @@ else
             <th>
                 Total Payment
             </th>
+            <th>
+                Grand Total Payment
+            </th>
             <th></th>
         </tr>
 
@@ -52,6 +55,9 @@ else
         </td>
         <td>
             @String.Format("{0:c}", item.TotalPayment)
+        </td>
+        <td>
+            @String.Format("{0:c}", item.GrandTotalSale)
         </td>
         <td>
             @Html.ActionLink("Details", "Details", new { id = item.OrderID })

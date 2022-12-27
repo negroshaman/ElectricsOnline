@@ -30,6 +30,8 @@ public partial class Order_Products
 
     public int StateID { get; set; }
 
+    public Nullable<decimal> GrandTotal { get; set; }
+
 
 
     public virtual Order Order { get; set; }

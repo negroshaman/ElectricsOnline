@@ -22,5 +22,13 @@ namespace ElectricsOnlineWebApp.Models
                 return (decimal)this.Order_Products.Sum(s => s.SalesTax);
             }
         }
+        public decimal GrandTotalSale
+        {
+            get
+            {
+                return (decimal)this.Order_Products.Sum(s => s.GrandTotal);
+            }
+
+        }
     }
 }

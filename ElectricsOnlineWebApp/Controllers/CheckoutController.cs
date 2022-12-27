@@ -164,8 +164,6 @@ namespace ElectricsOnlineWebApp.Controllers
                     }
                 }
 
-                //int cStateId = int.Parse(customer.State);
-                //var stateName = _ctx.States.FirstOrDefault(s => s.Id == cStateId);
 
                 if (ModelState.IsValid)
                 {
@@ -206,7 +204,8 @@ namespace ElectricsOnlineWebApp.Controllers
                             Qty = i.Quantity,
                             SalesTax = i.Quantity * i.UnitPrice * salesTax.SalesTax / 100,
                             StateID = cStateId,
-                            TotalSale = i.Quantity * i.UnitPrice + (i.Quantity * i.UnitPrice * salesTax.SalesTax / 100)
+                            TotalSale = i.Quantity * i.UnitPrice,
+                            GrandTotal = i.Quantity * i.UnitPrice + (i.Quantity * i.UnitPrice * salesTax.SalesTax / 100)
                         }); ;
                         _ctx.ShoppingCartDatas.Remove(i);
                     }

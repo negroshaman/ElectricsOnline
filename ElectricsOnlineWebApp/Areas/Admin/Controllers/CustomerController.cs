@@ -20,23 +20,7 @@ namespace ElectricsOnlineWebApp.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var customers = _ctx.Customers.ToList();
-            //var cstate = _ctx.Customers.ToList<Customer>();
-            //var customers = (from c in _ctx.Customers
-            //                 join s in _ctx.States on cstate equals s.Id
-            //                 select new
-            //                 {
-            //                     c.CID,
-            //                     c.FName,
-            //                     c.LName,
-            //                     c.Phone,
-            //                     c.Suburb,
-            //                     c.Postcode,
-            //                     StateName = s.StateName,
-            //                     c.Ctype,
-            //                     c.Email  
-            //                 }).ToList();
-
-
+        
             var model = Mapper.Map<IEnumerable<Customer>, IEnumerable<ElectricsOnlineWebApp.Models.Customer>>((IEnumerable<Customer>)customers);
             return View("Index", model);
         }
